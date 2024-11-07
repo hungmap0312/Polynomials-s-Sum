@@ -124,5 +124,21 @@ int main() {
     cout << "h(x) = f(x) + g(x) = ";
     printPolynomial(h);
 
+    while (f) {
+        Node* temp = f;
+        f = f->next;
+        delete temp;
+    }
+    while (g) {
+        Node* temp = g;
+        g = g->next;
+        delete temp;
+    }
+    while (h) {
+        Node* temp = h;
+        h = h->next;
+        delete temp;
+    }
+
     return 0;
 }
